@@ -14,6 +14,10 @@
  */
 // Libraries
 #include <Arduino.h>
+#include <SoftwareSerial.h>
+#include <FS.h>
+#include <SD.h>
+#include <SPI.h>
 #include <string.h>
 #include <driver/spi_master.h>
 #include <driver/uart.h>
@@ -21,14 +25,7 @@
 #include <esp_vfs_fat.h>
 #include <esp_heap_caps.h>
 
-#include <SoftwareSerial.h>
-
-#include "FS.h"
-#include "SD.h"
-#include "SPI.h"
-
 #include "constants.h"
-
 
 // Pins for Northbridge-CPU SPI
 #define VSPI_CS 5
