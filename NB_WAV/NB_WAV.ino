@@ -484,11 +484,14 @@ void loop() {
   // send_MP3("/PB_ShSe.wav");
   // send_MP3("/meglo.mp3");
 
+  // randomSeed(time(NULL));
+  delay(1);
   uint32_t idx = random(0, NUM_WAV);
-  // Serial.printf("idx: %d\n", idx);
+  Serial.printf("idx: %d\n", idx);
 
   send_MP3((const char*) wavs[idx]);
 
+  Serial.println("\n\n");
 
 
   delay(2000);
